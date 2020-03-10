@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    
+}
+
+    <fieldset>
+        <legend> User DashBoard </legend>
+
+        @if (Session["UserName"] != null)
+        {<text >
+            Welcome @Session["UserName"].ToString() </text>
+    <div class="navbar-collapse collapse">
+        <ul class="nav pull-left">
+
+            <li>@Html.ActionLink("Manage Students", "Index", "Students")</li>
+        </ul>
+        <ul class="nav pull-left">
+            <li>@Html.ActionLink("Logout", "Login", "Home")</li>
+            
+
+        </ul>
+    </div>
+    }
+    </fieldset>  
